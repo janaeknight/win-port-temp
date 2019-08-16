@@ -1,0 +1,126 @@
+/*rainbow link animation*/
+#anim {
+    animation-name: rainbowLink;
+    animation-duration: 3s;
+}
+@keyframes rainbowLink {
+    0% {
+        background-color: #9bd8c8;
+    }
+    10% {
+        background-color: #f6b056;
+    }
+    20% {
+        background-color: #f6f056;
+    }
+    30% {
+        background-color: #b6f656;
+    }
+    40% {
+        background-color: #91a7f4;
+    }
+    50% {
+        background-color: #ddb6f0;
+    }
+    70% {
+        background-color: #f0b6ea;
+    }
+    80% {
+        background-color: #eb7e97;
+    }
+    90% {
+        background-color: #f27163;
+    }
+    100% {
+        background-color: #63f294;
+    }
+}
+            /*rainbow link animation*/
+body {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", "Bitstream Vera Sans Mono", monospace;
+    background-color: #007C7D;
+}
+
+/*########################### DESKTOP ###########################*/
+.desktop {
+    padding-top: 20px; padding-bottom: 20px;
+    background-color: #007C7D;
+}
+.desktop-column {
+    text-align: center;
+}
+.desktop-column img {
+    margin-left: auto; margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: -10px;
+    z-index: 0;
+}
+.desktop-left a {
+    color: white;
+    z-index: 1;
+}
+
+
+
+/*########################### TASKBAR ###########################*/
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100vw; height: auto;
+    padding-top: 5px; padding-bottom: 5px;
+    background-color: #C0C0C0;
+}
+/* Dropup Button */
+.dropbtn {
+    background-color: #C0C0C0;
+    color: white;
+    padding-left: 15px; padding-right: 15px;
+    padding-top: 10px; padding-bottom: 10px;
+    font-size: .9em;
+    border:  thin solid gray;
+}
+.dropbtn img {
+    width: 25%; height: 25%;
+}
+.dropup img {
+    width: 25%; height: 25%;
+}
+  /* The container <div> - needed to position the dropup content */
+.dropup {
+    position: relative;
+    display: inline-block;
+}
+
+  /* Dropup content (Hidden by Default) */
+.dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropup */
+.dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+  /* Change color of dropup links on hover */
+.dropup-content a:hover {background-color: #ddd}
+  
+  /* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+    display: block;
+}
+  
+  /* Change the background color of the dropup button when the dropup content is shown */
+.dropup:hover .dropbtn {
+    animation: rainbowLink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    color: black;
+}
