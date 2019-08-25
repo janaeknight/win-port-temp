@@ -1,3 +1,38 @@
+body {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", "Bitstream Vera Sans Mono", monospace;
+    background-color: #007C7D;
+    overflow-x: hidden; overflow-y:hidden;
+}
+
+                                        /** Body Color Buttons Settings (BCBS)**/
+.purpleSettings {
+    background-color: purple;
+}
+.greenSettings {
+    background-color: lime;
+}
+.hillSettings {
+    background-image: url("https://i.ibb.co/XCvTD9x/thehill.jpg");
+    background-size: cover;
+    color: black
+}
+.toastscreen {
+    background-image: url("https://i.ibb.co/XCvTD9x/thehill.jpg");
+    background-size: cover;
+}
+/** Body Color Buttons Settings (BCBS)**/
+.defaultFont {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", "Bitstream Vera Sans Mono", monospace;
+}
+.sysComicSans {
+    font-family: "Comic Sans MS", cursive, 'sans serif';
+}
+.sysArial {
+    font-family: Arial, 'sans serif';
+}
+.sysCourierNew {
+    font-family: "Courier New", serif;
+}
 /*rainbow link animation*/
 #anim {
     animation-name: rainbowLink;
@@ -35,16 +70,26 @@
         background-color: #63f294;
     }
 }
-            /*rainbow link animation*/
-body {
-    font-family: "Lucida Console", "Lucida Sans Typewriter", "Bitstream Vera Sans Mono", monospace;
-    background-color: #007C7D;
-}
+
+/****************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                TABLE OF CONTENTS
+            -- -- -- -- -- -- -- --
+↟↟↟ ↥   Animations Setup, General Body/HTML Formatting // Body-Color-Buttons-Settings
+
+↡↡↡ ↧   Desktop, Taskbar, Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/****************************************************************/
+
+
+
 
 /*########################### DESKTOP ###########################*/
+.desktop a {
+    text-decoration: none;
+}
 .desktop {
     padding-top: 20px; padding-bottom: 20px;
-    background-color: #007C7D;
 }
 .desktop-column {
     text-align: center;
@@ -59,23 +104,38 @@ body {
     color: white;
     z-index: 1;
 }
-
-
-
+.desktopButton {
+    color: white;
+    background: none;
+    border: none;
+}
 /*########################### TASKBAR ###########################*/
 .taskbar {
     position: fixed;
     bottom: 0;
-    width: 100vw; height: auto;
+    width: 100vw; height: 50px;
+    outline: 3px ridge white;
+    border-top: 1px solid slategrey;
     padding-top: 5px; padding-bottom: 5px;
-    background-color: #C0C0C0;
+    background-color: silver;
+}
+        /* !!!! Literally the only time I'm ever targeting a bootstrap class directly. I need this here until I figure out another way to remove Bootstrap's container-fluid padding on the left and right of 15px*/
+.container-fluid {
+    padding-left: 0px; padding-right: 0px;
+}
+        /* !!!! */
+                                        /** TASKBAR DROPUP **/
+.taskbar button {
+    color: black;
+}
+.tbr-sound button {
+    height: 20px; width: 20px;
 }
 /* Dropup Button */
 .dropbtn {
-    background-color: #C0C0C0;
+    background-color: silver;
     color: white;
-    padding-left: 15px; padding-right: 15px;
-    padding-top: 10px; padding-bottom: 10px;
+    padding-top: 8px; padding-bottom: 8px;
     font-size: .9em;
     border:  thin solid gray;
 }
@@ -90,7 +150,10 @@ body {
     position: relative;
     display: inline-block;
 }
-
+.dropup-subcontent {
+    position: relative;
+    display: inline-block;    
+}
   /* Dropup content (Hidden by Default) */
 .dropup-content {
     display: none;
@@ -100,7 +163,23 @@ body {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
+}
+.sub-content {
+    position: relative;
+}
+.sub-content:hover .dropup-subcontent{
+    display: block;
+}
+.dropup-subcontent {
+    display: none;
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
   /* Links inside the dropup */
 .dropup-content a {
     color: black;
@@ -108,19 +187,134 @@ body {
     text-decoration: none;
     display: block;
 }
-  
+.dropup-subcontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;   
+}
   /* Change color of dropup links on hover */
 .dropup-content a:hover {background-color: #ddd}
+.dropup-subcontent a:hover {background-color: #ddd}
   
   /* Show the dropup menu on hover */
 .dropup:hover .dropup-content {
     display: block;
 }
-  
+.dropup-subcontent:hover {
+    display: block;
+}
   /* Change the background color of the dropup button when the dropup content is shown */
 .dropup:hover .dropbtn {
     animation: rainbowLink;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     color: black;
+}
+                                        /** TASKBAR-LEFT-LINKS **/
+.taskbar-left-links a{
+    display: inline;
+    text-align: left;
+    font-size: 2em;
+    color: darkslategray;
+}
+                                        /** TASKBAR-RIGHT **/
+.taskbar-right {
+    text-align: right;
+}
+/*########################### TERMINAL STYLING ###########################*/
+span::before {
+    content: attr(data-unselectable);
+}
+.terminal {
+    display: block;
+    width: 400px; min-height: 150px;
+    border: 1.4px groove black;
+    background-color: silver;
+    color: black;
+    z-index: auto;
+}
+.terminal-topbar {
+    display: block;
+    width: inherit; height: auto;
+    overflow: hidden;
+    border-left: none; border-right: none; border-top: none;
+    border-bottom: .5px inset black;
+    background-color: #999999;
+}
+.ttb-title {
+    padding-left: 1px;
+    font-size: 1.1em;
+}
+.terminal-topbar button {
+    background-color: silver;
+    font-size: .9em;
+    margin-top: .5px; margin-bottom: .5px;
+}
+.terminal-sticky {
+    width: inherit; height: auto;
+    border-left: none; border-right: none; border-top: none;
+    border-bottom: 1.5px groove #999999;
+    padding-top: 3px; padding-bottom: 3px;
+    text-align: left;
+    font-size: .9em;
+}
+.terminal-sticky ul{
+    list-style: none;
+    margin-block-start: 0; margin-block-end: 0;
+    margin-inline-start: 0px; margin-inline-end: 0px;
+    padding-inline-start: 5px;
+}
+.terminal-sticky li{
+    display: inline;
+}
+.terminal-content {
+    width: inherit; height: auto;
+    overflow-x: hidden;
+}
+
+                                                /*### SETTINGS TERM ###*/
+.settings-themes {
+    width: 20px; height: 20px;
+}
+#settingsPurple {
+    background-color: purple;
+}
+#settingsGreen {
+    background-color: limegreen;
+}
+#settingsOrange {
+    background-color: coral;
+}
+#settingsYellow {
+    background-color: khaki;
+}
+#settingsRed {
+    background-color: tomato;
+}
+#settingsPink {
+    background-color: deeppink;
+}
+#settingsBlue {
+    background-color: #007C7D;
+}
+#settingsBlack {
+    background-color: black;
+}
+                                        /* Fonts*/
+.settings-fonts {
+    min-width: 15px; height: auto;
+    text-align: center;
+}
+#settingsDefault {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", "Bitstream Vera Sans Mono", monospace !important;
+}
+#settingsCS {
+    font-family: "Comic Sans MS", cursive, 'sans serif'!important;
+}
+#settingsArial {
+    font-family: Arial, 'sans serif' !important;
+}
+#settingsCN {
+    font-family: "Courier New", serif !important;
 }
