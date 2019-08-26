@@ -14,7 +14,7 @@ body {
 .hillSettings {
     background-image: url("https://i.ibb.co/XCvTD9x/thehill.jpg");
     background-size: cover;
-    color: black
+    color: black;
 }
 .toastscreen {
     background-image: url("https://i.ibb.co/XCvTD9x/thehill.jpg");
@@ -105,6 +105,9 @@ body {
     z-index: 1;
 }
 .desktopButton {
+    display: block;
+    height: 80px; width: 120px;
+    text-align: center;
     color: white;
     background: none;
     border: none;
