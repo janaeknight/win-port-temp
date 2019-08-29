@@ -34,10 +34,6 @@ body {
     font-family: "Courier New", serif;
 }
 /*rainbow link animation*/
-#anim {
-    animation-name: rainbowLink;
-    animation-duration: 3s;
-}
 @keyframes rainbowLink {
     0% {
         background-color: #9bd8c8;
