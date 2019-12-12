@@ -1,3 +1,17 @@
+/*rainbow link animation*/
+@keyframes rainbowLink {
+    0% { background-color: #9bd8c8; }
+    10% { background-color: #f6b056; }
+    20% { background-color: #f6f056; }
+    30% { background-color: #b6f656; }
+    40% { background-color: #91a7f4; }
+    50% { background-color: #ddb6f0; }
+    70% { background-color: #f0b6ea; }
+    80% { background-color: #eb7e97; }
+    90% { background-color: #f27163; }
+    100% { background-color: #63f294; }
+}
+
 body {
     display: flex; flex-direction: column;
     width: 100vw; height: 100vh;
@@ -33,14 +47,45 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     border-top: 1.5px inset aliceblue; padding: 0 .5%;
     font-family: Consolas, monaco, monospace; 
 }
-.task-left, .task-right { width: 20%; height: inherit; }
+.task-left, .task-right { width: 20%; height: inherit; margin-top: 5px; }
 .task-cntr { width: 60%; height: inherit; }
 .taskbar img { height: 25px; margin: auto 0; }
-.taskbar button {
-    height: 30px; margin: auto 0 !important;
+.task-left button {
+    height: 30px;
     border: 1px inset black;
 }
 .taskbar button img { height: 25px; padding-right: 8px; }
+.t-substart, .t-subsubstart {
+    position: absolute; font-size: 18px;
+    background-color: silver;
+    border-right: 2px groove lightslategray;
+}
+.t-substart {
+    display: flex; flex-direction: column-reverse;
+    width: 275px; height: 305px;
+    bottom: 42px;
+}
+.t-substart img {
+    margin-left: 10px; padding-right: 10px;
+    height: 32px;
+}
+.t-substart a {
+    display: flex; flex-direction: row;
+    width: 100%; color: darkslategray;
+    text-decoration: none; padding: 2% 0;
+}
+.t-substart span { color: black; }
+.taskbar button:hover, .t-substart a:hover, .t-subsubstart a:hover {
+    animation: rainbowLink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    color: black; cursor: pointer;
+}
+.t-subsubstart {
+    left: 275px; bottom: 250px;
+    width: 275px; height: 130px;
+    z-index: 1;
+}
 
 /*~=~=~~=~=~~=~=~~=~=~~=~=~~=~ -- L/R -- ~=~~=~=~~=~=~~=~=~~=~=~~=~=~*/
 #left, #right { margin: 2% 0; height: 100%; }
