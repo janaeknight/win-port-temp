@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Here</title>
+    <link rel="icon" type="image/png" href="css/media/desktop-icons/misccolorful.png">
+    <title>Pof99</title>
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" />
     <link href="css/flex.css" type="text/css" rel="stylesheet" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 <body>
     <div class="pseudobody" id="pseudobody">
@@ -27,6 +30,25 @@
         </div>
         <div id="right"></div>
     </div>
-    <div class="taskbar" id="taskbar"></div>
+    <div class="taskbar" id="taskbar">
+        <button id="t-start"><img src="css/media/desktop-icons/windowslogo.png"><b>START</b></button>
+    
+        <div class="task-right">
+            <img src="css/media/desktop-icons/taskbar-github.png">
+            <img src="css/media/desktop-icons/taskbar-linkedin.png">
+        </div>
+    </div>
+
+
+
+    <!------------------------------------------------------------------->
+    <script>
+        $(function() {
+            // class="ui-widget-content" || <------ yeah ok
+            $("#myComputerButton").draggable();
+            $("#networkNeighborhooodButton").draggable();
+            $("#recycleBinButton").draggable();
+        });
+    </script>
 </body>
 </html>

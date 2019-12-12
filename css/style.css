@@ -10,13 +10,40 @@ body {
     display: flex; flex-direction: row;
     width: inherit; height: 100%;
 }
+
+input:focus, select:focus, textarea:focus, button:focus { outline: none; }
+/* REMOVES HIGHLIGHT FROM INPUT, BUTTONS, ETC. */
+
+/****************************************************************/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                TABLE OF CONTENTS
+            -- -- -- -- -- -- -- --
+↟↟↟ ↥   Animations Setup, General Body/HTML Formatting // Body-Color-Buttons-Settings
+
+↡↡↡ ↧   Desktop, Taskbar, Left/Right, Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/****************************************************************/
+
+/*~=~=~~=~=~~=~=~~=~=~~=~=~~=~ -- TASKBAR -- ~=~~=~=~~=~=~~=~=~~=~=~~=~=~*/
 .taskbar {
     width: 100vw; height: 42px;
     position: absolute; bottom: 0;
+    display: flex; flex-direction: row;
     background-color: silver; margin-bottom: -15px;
+    border-top: 1.5px inset aliceblue; padding: 0 .5%;
+    font-family: Consolas, monaco, monospace; 
 }
+.taskbar img { height: 25px; margin: auto 0; }
+.taskbar button {
+    height: 30px; margin: auto 0;
+    border: 1px inset black;
+}
+.taskbar button img { height: 25px; padding-right: 8px; }
+
+/*~=~=~~=~=~~=~=~~=~=~~=~=~~=~ -- L/R -- ~=~~=~=~~=~=~~=~=~~=~=~~=~=~*/
 #left, #right { margin: 2% 0; height: 100%; }
-#left { 
+                                                 /* ----- LEFT ----- */
+#left {
     width: 350px;
     display: flex; flex-direction: column; 
     flex-wrap: wrap; overflow: hidden;
@@ -31,11 +58,8 @@ body {
     display: block;
     margin: 0 auto; padding-bottom: 5px;
 }
-
-
+                                                /* ----- RIGHT ----- */
 #right {
     width: 100%;
     /*background-color: palegreen;*/ 
 }
-
-input:focus, select:focus, textarea:focus, button:focus { outline: none; }

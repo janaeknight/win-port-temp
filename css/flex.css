@@ -38,4 +38,20 @@
 .center img { margin-left: auto; margin-right: auto; }
 .radius { border-radius: 100%; }
 
+/*~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-*/
+
+/*rainbow link animation*/
+@keyframes rainbowLink {
+    0% { background-color: #9bd8c8; }
+    10% { background-color: #f6b056; }
+    20% { background-color: #f6f056; }
+    30% { background-color: #b6f656; }
+    40% { background-color: #91a7f4; }
+    50% { background-color: #ddb6f0; }
+    70% { background-color: #f0b6ea; }
+    80% { background-color: #eb7e97; }
+    90% { background-color: #f27163; }
+    100% { background-color: #63f294; }
+}
+
 
