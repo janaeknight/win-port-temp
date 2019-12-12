@@ -18,3 +18,5 @@ var inactivityTime = function () {
 }; 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+// You should add the tiles of the gameboard to the DOM
+// 

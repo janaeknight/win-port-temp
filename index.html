@@ -31,18 +31,24 @@
         <div id="right"></div>
     </div>
     <div class="taskbar" id="taskbar">
-        <button id="t-start"><img src="css/media/desktop-icons/windowslogo.png"><b>START</b></button>
-    
+        <div class="task-left">
+            <button id="t-start"><img src="css/media/desktop-icons/windowslogo.png"><b>START</b></button>
+        </div>
+        <div class="task-cntr"></div>
         <div class="task-right">
             <img src="css/media/desktop-icons/taskbar-github.png">
             <img src="css/media/desktop-icons/taskbar-linkedin.png">
+            <button>
+                <b><span id="month"></span>
+                <span id="year"></span></b>
+            </button>
         </div>
     </div>
 
 
 
     <!------------------------------------------------------------------->
-    <script>
+    <script> // draggable icons
         $(function() {
             // class="ui-widget-content" || <------ yeah ok
             $("#myComputerButton").draggable();
@@ -50,5 +56,16 @@
             $("#recycleBinButton").draggable();
         });
     </script>
+    <script> // date
+        var m = new Date();
+        var months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        document.getElementById("month").innerHTML = months[m.getMonth()];
+        var y = new Date();
+        document.getElementById("year").innerHTML = y.getFullYear();  
+    </script>
+    <!--
+        See External JS.
+    -->
+    <script src="java/javascript.js"></script>
 </body>
 </html>

@@ -33,9 +33,11 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     border-top: 1.5px inset aliceblue; padding: 0 .5%;
     font-family: Consolas, monaco, monospace; 
 }
+.task-left, .task-right { width: 20%; height: inherit; }
+.task-cntr { width: 60%; height: inherit; }
 .taskbar img { height: 25px; margin: auto 0; }
 .taskbar button {
-    height: 30px; margin: auto 0;
+    height: 30px; margin: auto 0 !important;
     border: 1px inset black;
 }
 .taskbar button img { height: 25px; padding-right: 8px; }
