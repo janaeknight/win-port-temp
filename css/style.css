@@ -49,6 +49,7 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 }
 .task-left, .task-right { width: 20%; height: inherit; margin-top: 5px; }
 .task-cntr { width: 60%; height: inherit; }
+.task-right { text-align: right; }
 .taskbar img { height: 25px; margin: auto 0; }
 .task-left button {
     height: 30px;
@@ -56,18 +57,20 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 }
 .taskbar button img { height: 25px; padding-right: 8px; }
 .t-substart, .t-subsubstart {
+    display: none;
     position: absolute; font-size: 18px;
     background-color: silver;
     border-right: 2px groove lightslategray;
+    z-index: 1;
 }
-.t-substart {
-    display: flex; flex-direction: column-reverse;
-    width: 275px; height: 305px;
-    bottom: 42px;
-}
-.t-substart img {
+.t-substart img, .t-subsubstart img {
     margin-left: 10px; padding-right: 10px;
     height: 32px;
+}
+.t-substart {
+    flex-direction: column-reverse; 
+    width: 275px; height: 305px;
+    bottom: 42px; left: -5px; 
 }
 .t-substart a {
     display: flex; flex-direction: row;
@@ -81,8 +84,9 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     animation-iteration-count: infinite;
     color: black; cursor: pointer;
 }
+.taskbar button:hover .t-substart { display: flex; }
 .t-subsubstart {
-    left: 275px; bottom: 250px;
+    left: 275px; bottom: 260px;
     width: 275px; height: 130px;
     z-index: 1;
 }
