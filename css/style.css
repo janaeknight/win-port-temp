@@ -25,6 +25,13 @@ body {
     width: inherit; height: 100%;
 }
 
+#mobilewarning { display: none; }
+
+@media screen and (max-width: 720px ) {
+    .pseudobody, .taskbar { display: none !important; }
+    #mobilewarning { display: block; margin: auto 0;}
+}
+
 input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 /* REMOVES HIGHLIGHT FROM INPUT, BUTTONS, ETC. */
 
@@ -32,7 +39,7 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                 TABLE OF CONTENTS
             -- -- -- -- -- -- -- --
-↟↟↟ ↥   Animations Setup, General Body/HTML Formatting // Body-Color-Buttons-Settings
+↟↟↟ ↥   Animations Setup, General Body/HTML Formatting // Body-Color-Buttons-Settings, Mobile Warning
 
 ↡↡↡ ↧   Desktop, Taskbar, Left/Right, Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -43,7 +50,7 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     width: 100vw; height: 42px;
     position: absolute; bottom: 0;
     display: flex; flex-direction: row;
-    background-color: silver; margin-bottom: -15px;
+    background-color: silver; margin-bottom: -1px;
     border-top: 1.5px inset aliceblue; padding: 0 .5%;
     font-family: Consolas, monaco, monospace; 
 }
