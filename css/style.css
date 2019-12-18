@@ -98,6 +98,7 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     z-index: 1;
 }
 .task-cntr button {
+    display: none;
     animation: none !important;
     width: auto;
     border: .8px dashed slategray;
