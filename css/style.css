@@ -76,7 +76,7 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 }
 .t-substart {
     flex-direction: column-reverse; 
-    width: 275px; height: 305px;
+    width: 275px; height: auto;
     bottom: 42px; left: -5px; 
 }
 .t-substart a {
@@ -96,6 +96,17 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     left: 275px; bottom: 260px;
     width: 275px; height: 130px;
     z-index: 1;
+}
+.task-cntr button {
+    animation: none !important;
+    width: auto;
+    border: .8px dashed slategray;
+    margin-top: 6px;
+}
+.task-cntr button img { height: 22px; }
+@media screen and (max-width: 150px ) {
+    .task-cntr button span { display: none !important; }
+    .task-cntr button img { margin: 0 auto; } /* yIkEs */
 }
 
 /*~=~=~~=~=~~=~=~~=~=~~=~=~~=~ -- L/R -- ~=~~=~=~~=~=~~=~=~~=~=~~=~=~*/
