@@ -34,10 +34,17 @@
             <button type="button" id="notesButton"><img src="css/media/desktop-icons/notes.png">Notes</button>
         </div>
         <div id="right">
-            <div class="window" id="settingsTerminal">
-
+            <div class="window ui-widget-content" id="settingsTerminal">
+                <div class="t-tb">
+                    <div class="t-tbl">
+                        <img src="css/media/desktop-icons/settings.png">Settings
+                    </div>
+                    <div class="t-tbr">
+                        <button onClick="closeSettings()">X</button>
+                    </div>
+                </div>
             </div>
-            <!--div class="window" id=""></!--div-->
+            <!--div class="window ui-widget-content" id=""></!--div-->
         </div>
     </div>
     <div class="taskbar" id="taskbar">
@@ -46,7 +53,7 @@
                 <div class="t-substart">
                     <a><img src="css/media/desktop-icons/desktopside.png">Shut Down</a><hr>
                     <a><img src="css/media/desktop-icons/help.png">Help</a>
-                    <a><img src="css/media/desktop-icons/settings.png">Settings</a>
+                    <a onClick="openSettings()"><img src="css/media/desktop-icons/settings.png">Settings</a>
                     <a><img src="css/media/desktop-icons/folderopen.png"> Even More Documents</a>
                     <a><img src="css/media/desktop-icons/folderopen.png"> More Documents</a>
                     <a><img src="css/media/desktop-icons/folderopen.png">Documents</a>
@@ -79,9 +86,7 @@
     <script> // draggable icons
         $(function() {
             // class="ui-widget-content" || <------ yeah ok
-            $("#myComputerButton").draggable();
-            $("#networkNeighborhooodButton").draggable();
-            $("#recycleBinButton").draggable();
+            $("#settingsTerminal").draggable();
         });
     </script>
     <script> // date

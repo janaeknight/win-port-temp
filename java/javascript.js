@@ -20,3 +20,12 @@ var inactivityTime = function () {
 
 // You should add the tiles of the gameboard to the DOM
 // 
+
+let settingsTerminal = document.getElementById("settingsTerminal");
+
+function openSettings() {
+    settingsTerminal.style.display = "block";
+}
+function closeSettings() {
+    settingsTerminal.style.display = "none";
+}
