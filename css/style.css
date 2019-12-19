@@ -105,7 +105,7 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     margin-top: 6px;
 }
 .task-cntr button img { height: 22px; }
-@media screen and (max-width: 150px ) {
+@media screen and (max-width: 1250px ) {
     .task-cntr button span { display: none !important; }
     .task-cntr button img { margin: 0 auto; } /* yIkEs */
 }
@@ -133,3 +133,15 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     width: 100%;
     /*background-color: palegreen;*/ 
 }
+
+/*~=~=~~=~=~~=~=~~=~=~~=~=~ -- WINDOW/TB -- ~=~=~~=~=~~=~=~~=~=~~=~=~*/
+
+.window {
+    display: block;
+    width: 400px; min-height: 150px;
+    border: 1.4px groove black;
+    background-color: thistle;
+    color: thistle;
+    z-index: auto;
+}
+

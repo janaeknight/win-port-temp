@@ -20,3 +20,13 @@ var inactivityTime = function () {
 
 // You should add the tiles of the gameboard to the DOM
 // 
+
+
+let netNode = document.getElementById("netNode");
+let netTerminal = document.getElementById("netTerminal");
+
+if (netTerminal.style.display = "block") {
+    netNode.style.display = "block";
+} else {
+    netNode.style.display = "none";
+}
