@@ -158,9 +158,9 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     outline: .5px inset slategray;
 }
 
-/
-    #settingsTerminal { display: none; }
-/
+
+    /*#settingsTerminal { display: none; }*/ 
+
 
 /* --------------------- == SETTINGS TERMINAL ==*/
 #settingsTerminal {
