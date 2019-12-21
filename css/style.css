@@ -159,7 +159,7 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 }
 
 
-    /*#settingsTerminal { display: none; }*/ 
+    #settingsTerminal { display: none; }
 
 
 /* --------------------- == SETTINGS TERMINAL ==*/
